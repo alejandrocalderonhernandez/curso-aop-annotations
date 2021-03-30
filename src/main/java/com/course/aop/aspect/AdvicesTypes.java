@@ -14,7 +14,7 @@ public class AdvicesTypes {
 		
 	}
 	
-	public void afterFinally() {
+	public void afterReturning() {
 		
 	}
 	

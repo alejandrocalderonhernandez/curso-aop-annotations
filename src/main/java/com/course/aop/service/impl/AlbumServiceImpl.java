@@ -27,6 +27,9 @@ public class AlbumServiceImpl implements IAlbumService {
 
 	@Override
 	public AlbumEntity save(AlbumEntity entity) {
+		if(entity.getName().equalsIgnoreCase("Exception")) {
+			throw new IllegalArgumentException("Te name of album cant be  " + entity.getName());
+		}
 		return this.repository.save(entity);
 	}
 
